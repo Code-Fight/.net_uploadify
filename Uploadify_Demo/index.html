@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="Js/jquery-1.7.2.min.js"></script>
+    <script src="Js/swfobject.js"></script>
+    <link href="Js/uploadify/uploadify.css" rel="stylesheet" />
+    <script src="Js/uploadify/jquery.uploadify.js"></script>
+</head>
+<body>
+<div style="border: solid 1px; width: 500px;margin: 0 auto">
+    uploadify 上传插件 + swfobject flash加载插件 使用demo<br/><br/>
+    官网：http://www.uploadify.com<br/>
+    doc：http://www.uploadify.com/documentation/<br/>
+    demos：http://www.uploadify.com/demos/<br/>
+</div>
+    <br/>
+<div style="margin: 0 auto">
+    <input type="file" name="uploadify" id="uploadify1"/>
+    <button onclick=" submit() ">保存</button>
+    <div id="fileQueue" style="margin-left: auto; margin-right: auto"></div>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $("#uploadify1").uploadify({
+            'swf': 'Js/uploadify/uploadify.swf',
+            'uploader': 'UploadHandler.ashx',
+            'buttonText': '选择文件',
+            'cancelImg': 'Js/uploadify/uploadify-cancel.png',
+            'folder': 'UploadFile',
+            'queueID': 'fileQueue',
+            'auto': false,
+            'multi': true,
+            'removeCompleted': false,
+
+            'onUploadError': function(file, errorCode, errorMsg, errorString) {
+                //上传失败事件
+                alert("上传文件失败");
+            },
+            'onSelect': function(file) {
+                //选择文件事件
+            },
+            'onCancel': function(file) {
+                //取消按钮事件
+            },
+            'onUploadSuccess': function(file, data, response) {
+                //上传成功事件
+                alert("文件上传成功");
+            }
+
+
+        });
+    });
+
+    function submit() {
+        $('#uploadify1').uploadify('upload', '*');
+    }
+</script>
+</body>
+</html>

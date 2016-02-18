@@ -1,0 +1,5 @@
+c:\users\zf\documents\visual studio 2012\Projects\Uploadify_Demo\Uploadify_Demo\bin\Uploadify_Demo.dll
+c:\users\zf\documents\visual studio 2012\Projects\Uploadify_Demo\Uploadify_Demo\bin\Uploadify_Demo.pdb
+c:\users\zf\documents\visual studio 2012\Projects\Uploadify_Demo\Uploadify_Demo\obj\Debug\Uploadify_Demo.csprojResolveAssemblyReference.cache
+c:\users\zf\documents\visual studio 2012\Projects\Uploadify_Demo\Uploadify_Demo\obj\Debug\Uploadify_Demo.dll
+c:\users\zf\documents\visual studio 2012\Projects\Uploadify_Demo\Uploadify_Demo\obj\Debug\Uploadify_Demo.pdb
